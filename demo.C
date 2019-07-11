@@ -1,3 +1,4 @@
+
 #include <chrono>
 #include <functional>
 #include <iostream>
@@ -23,7 +24,7 @@ demo(std::string const& filename)
   // Create a vector of length 1, containing the given filename.
   vector<string> filenames(1, filename);
 
-  // Don't do the following in compiled C++. This code relies on the
+  // Don't do the following in compiled C++. This code relies on the 
   // interactive ROOT system to (implicitly) own the histograms we
   // create on the heap. In a C++ program, this object would be leaked
   // (the memory unrecoverable by the program).
@@ -32,7 +33,7 @@ demo(std::string const& filename)
 
   auto start_time = system_clock::now();
   // We'll record the time it takes to process each gallery::Event.
-  vector<microseconds> times;
+  vector<microseconds> times; 
 
   for (gallery::Event ev(filenames); !ev.atEnd(); ev.next()) {
     auto const t0 = system_clock::now();
